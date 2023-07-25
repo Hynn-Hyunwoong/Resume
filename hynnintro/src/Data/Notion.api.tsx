@@ -1,13 +1,9 @@
-import { FC } from 'react';
 import axios from 'axios';
+import { GetStaticProps } from 'next';
 import { DATABASE_ID, API_KEY } from '@/app/config/Index';
-import {
-  Project,
-  ProjectProps,
-  ApiResponse,
-} from '@/Data/Interface/notion.interface';
+import { Project, ApiResponse } from './Interface/notion.interface';
 
-const notionData = async () => {
+const getStaticProps: GetStaticProps = async () => {
   const options = {
     method: 'POST',
     url: `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
@@ -22,20 +18,15 @@ const notionData = async () => {
 
   const res = await axios<ApiResponse>(options);
   const data = res.data;
+  const projectIds = data.results.map(
+    (aProject: Project) => aProject.properties.Name.title[0].plain_text,
+  );
+
+  console.log(`This Console is Data/NotionAPIs:  `, projectIds);
 
   return {
-    props: { data },
+    props: { projectIds },
   };
 };
 
-const Project: FC<ProjectProps> = async ({}) => {
-  const data = (await notionData()).props;
-  console.log(data);
-  return (
-    <div>
-      <p>123</p>
-    </div>
-  );
-};
-
-export default Project;
+export default getStaticProps;

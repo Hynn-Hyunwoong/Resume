@@ -86,7 +86,31 @@ const nondev = () => {
                 </span>
               </a>
             </div>
-            <img src="Logo_NonBack.png" alt="Logo" />
+            <div className="p-12 md:w-1/2 flex flex-col items-start">
+              <span className="inline-block py-1 px-2 rounded bg-indigo-50 text-indigo-500 text-xs font-medium tracking-widest">
+                Education
+              </span>
+              <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">
+                국가평생교육진흥원 - 공학사(컴퓨터공학)
+              </h2>
+              <p className="leading-relaxed mb-8">
+                비교적 이른나이부터 사회생활을 경험하면서, 학력에 대한 기본적
+                필요성을 느끼게 되었습니다. 개뱔자로서의 직무전환을 준비하면서,
+                학력에 대한 기본소양을 갖추기 위해 장기간의 공부 끝에 23년 7월
+                공학사를 취득하였습니다.
+              </p>
+              <div className="flex items-center flex-wrap pb-4 mb-4 border-b-2 border-gray-100 mt-auto w-full" />
+              <a className="inline-flex items-center">
+                <span className="flex-grow flex flex-col pl-4">
+                  <span className="title-font font-medium text-gray-900">
+                    공학사(컴퓨터공학)
+                  </span>
+                  <span className="text-gray-400 text-xs tracking-widest mt-0.5">
+                    2020.03 ~ 2023.08(학위수여예정)
+                  </span>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
