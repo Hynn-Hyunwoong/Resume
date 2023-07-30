@@ -30,6 +30,8 @@ const getNotionData = async () => {
   return res.data.results;
 };
 
+// Check Fetching data
+
 const Project: FC = async () => {
   const data = await getNotionData();
   const projects = data.map((item: any) => ({
