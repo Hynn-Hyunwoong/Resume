@@ -23,7 +23,7 @@ const Header = () => {
               기술스택
             </a>
             <a className="mr-5 hover:text-blue-500" href="project">
-              팀 프로젝트
+              프로젝트
             </a>
             <a
               className="mr-5 hover:text-blue-500"
